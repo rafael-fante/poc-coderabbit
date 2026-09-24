@@ -4,6 +4,8 @@ Projeto Node.js sem dependências externas para testar a revisão automática do
 
 Estimativas de custo e escala: [docs/custos.md](docs/custos.md).
 
+Resultado da segunda avaliação: [docs/benchmark-02.md](docs/benchmark-02.md).
+
 ## Executar localmente
 
 Requer Node.js 20 ou superior.
