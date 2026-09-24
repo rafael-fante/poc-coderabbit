@@ -1,3 +1,5 @@
+language: pt-BR
+
 reviews:
   auto_review:
     enabled: true
