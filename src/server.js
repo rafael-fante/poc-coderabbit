@@ -11,6 +11,11 @@ export function escapeHtml(value) {
   })[character]);
 }
 
+/**
+ * Ends requests with JSON for GET /health, HTML for GET /hello, or 404 text.
+ * The greeting uses the first 80 UTF-16 code units of the first `name` value
+ * (or "mundo" if absent) and inserts it into HTML without escaping it.
+ */
 export function app(request, response) {
   const url = new URL(request.url, 'http://localhost');
 
