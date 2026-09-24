@@ -1,0 +1,13 @@
+reviews:
+  auto_review:
+    enabled: true
+    base_branches:
+      - main
+    drafts: false
+    auto_incremental_review: true
+  path_instructions:
+    - path: "src/**"
+      instructions: |
+        Priorize vulnerabilidades de segurança verificáveis: XSS, validação de entrada,
+        exposição de dados e configuração insegura de cabeçalhos HTTP.
+        Explique um cenário de exploração concreto e a correção recomendada.
