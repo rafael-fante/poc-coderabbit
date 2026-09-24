@@ -2,6 +2,8 @@
 
 Projeto Node.js sem dependências externas para testar a revisão automática do CodeRabbit em um repositório público. A aplicação expõe `GET /health` e `GET /hello?name=...`. A segunda rota mostra um caso simples de saída HTML que deve manter o escape do texto enviado pelo usuário.
 
+Estimativas de custo e escala: [docs/custos.md](docs/custos.md).
+
 ## Executar localmente
 
 Requer Node.js 20 ou superior.
