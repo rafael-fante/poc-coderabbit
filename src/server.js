@@ -1,5 +1,6 @@
 import { createServer } from 'node:http';
 import { pathToFileURL } from 'node:url';
+import { handleBenchmark } from './benchmark.js';
 
 export function escapeHtml(value) {
   return String(value).replace(/[&<>"']/g, (character) => ({
@@ -13,6 +14,14 @@ export function escapeHtml(value) {
 
 export function app(request, response) {
   const url = new URL(request.url, 'http://localhost');
+
+  if (url.pathname.startsWith('/benchmark/')) {
+    handleBenchmark(request, response, url).catch(() => {
+      response.writeHead(500, { 'content-type': 'text/plain; charset=utf-8' });
+      response.end('Erro interno');
+    });
+    return;
+  }
 
   if (request.method === 'GET' && url.pathname === '/health') {
     response.writeHead(200, { 'content-type': 'application/json; charset=utf-8' });
