@@ -27,7 +27,7 @@ export function app(request, response) {
       'content-security-policy': "default-src 'none'",
       'x-content-type-options': 'nosniff',
     });
-    response.end(`<!doctype html><html lang="pt-BR"><body><h1>Olá, ${escapeHtml(name)}!</h1></body></html>`);
+    response.end(`<!doctype html><html lang="pt-BR"><body><h1>Olá, ${name}!</h1></body></html>`);
     return;
   }
 
